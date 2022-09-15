@@ -1,5 +1,46 @@
-{% extends "base.twig" %}
+{% extends "../base.twig" %}
+{% block stylesheet %}
+	<link rel="stylesheet" href="./css/login-style.css">
+{% endblock %}
+{% block header %}
+
+{% endblock %}
 {% block main %}
-	
+	<section>
+		<div class="logo-login">
+			<img src="./media/images/logo-login.png" alt="logo" id="logo-login">
+		</div>
+	</section>
+
+	<section class="vh-100">
+		<div class="container py-5 h-100">
+			<div class="row d-flex justify-content-center align-items-center h-100">
+				<div class="col-12 col-md-8 col-lg-6 col-xl-5">
+					<div class="card bg-white text-dark" style="border-radius: 1rem;">
+						<div class="card-body p-5 text-center font-weight-bold">
+
+							<div class="mb-md-5 mt-md-4 pb-5">
+
+								<h2 class="fw-bold mb-2 text-uppercase">CONNEXION :</h2>
+								<p class="text-dark-50 mb-5 littleText">Entrez votre login et mot de passe!</p>
+
+								<div class="fw-bold form-outline form-black mb-4">
+									<label class="form-label" for="typeMailX">IDENTIFIANT :</label>
+									<input type="mail" id="typeMailX" class="form-control form-control-lg"/>
+								</div>
+
+								<div class="fw-bold form-outline form-black mb-4">
+									<label class="form-label" for="typePasswordX">MOT DE PASSE :</label>
+									<input type="password" id="typePasswordX" class="form-control form-control-lg"/>
+								</div>
+
+								<button class="fw-bold btn btn-outline-primary btn-lg px-5 btnbtn" type="submit">VALIDER</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
 {% endblock %}

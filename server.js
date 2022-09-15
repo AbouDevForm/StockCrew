@@ -11,10 +11,10 @@ app.use(session({
     resave: false,
     saveUninitialized: true,
     cookie: { secure: true }
-  }))
+}))
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static('./assets'))
-app.use( express.static('./node_modules/bootstrap/dist/css'));
+app.use(express.static('./node_modules/bootstrap/dist/css'));
 app.use(express.static('./node_modules/bootstrap/dist/js'));
 app.listen(process.env.PORT, (err) => {
     if (err) {
@@ -32,13 +32,10 @@ mongoose.connect(db, (err) => {
     }
 })
 
-app.get('/',(req,res)=>{
-    let users = ["tom","abou", "seb"]
-    res.render('pages/login.twig',{
-      users: users  
+app.get('/', (req, res) => {
+    res.render('pages/login.twig', {
     })
 })
 
 
 
-   
